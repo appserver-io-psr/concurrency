@@ -9,8 +9,8 @@
  *
  * PHP version 5
  *
- * @author     Johann Zelger <zelger@me.com>
- * @copyright 2015 TechDivision GmbH <info@appserver.io>
+ * @author    Johann Zelger <zelger@me.com>
+ * @copyright 2016 TechDivision GmbH <info@appserver.io>
  * @license   http://opensource.org/licenses/osl-3.0.php Open Software License (OSL 3.0)
  * @link      https://github.com/appserver-io-psr/concurrency
  * @link      http://www.appserver.io
@@ -19,9 +19,7 @@
 namespace AppserverIo\Psr\Concurrency;
 
 /**
- * Interface Runnable
- *
- * Simple interface for runnables
+ * Dummy test
  *
  * @author    Johann Zelger <zelger@me.com>
  * @copyright 2016 TechDivision GmbH <info@appserver.io>
@@ -29,12 +27,16 @@ namespace AppserverIo\Psr\Concurrency;
  * @link      https://github.com/appserver-io-psr/concurrency
  * @link      http://www.appserver.io
  */
-interface RunnableInterface
+class DummyTest extends \PHPUnit_Framework_TestCase
 {
+
     /**
-     * Runs specific logic of runnable class
+     * Dummy test
      *
      * @return void
      */
-    public function run();
+    public function testDummy()
+    {
+        $this->assertSame(true, true);
+    }
 }

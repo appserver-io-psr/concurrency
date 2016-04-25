@@ -1,0 +1,32 @@
+{
+	"name" : "appserver-io-psr/concurrency",
+	"description" : "Interfaces and objects that provides handling for thread-safety, concurrency programming and data sharing all written in PHP-Userland.",
+	"homepage" : "https://github.com/appserver-io-psr/concurrency",
+	"license" : "OSL-3.0",
+	"authors" : [{
+			"name" : "Johann Zelger",
+			"email" : "jz@appserver.io",
+			"homepage" : "https://github.com/zelgerj",
+			"role" : "Developer"
+		}
+	],
+	"require-dev" : {
+		"appserver-io/build" : "~1.0"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"AppserverIo\\Psr\\Concurrency" : [
+				"src/",
+				"tests/"
+			]
+		}
+	},
+	"support" : {
+		"email" : "jz@appserver.io",
+		"issues" : "https://github.com/appserver-io-psr/concurrency/issues",
+		"source" : "https://github.com/appserver-io-psr/concurrency"
+	},
+	"keywords" : [
+		"psr threading pthreads multithreading"
+	]
+}

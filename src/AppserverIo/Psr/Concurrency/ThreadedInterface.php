@@ -27,48 +27,8 @@ namespace AppserverIo\Psr\Concurrency;
  * @link      https://github.com/appserver-io-psr/concurrency
  * @link      http://www.appserver.io
  */
-interface ThreadedInterface extends \Countable, \ArrayAccess
+interface ThreadedInterface extends \Iterator, \Countable, \ArrayAccess
 {
-    /**
-     * Assigns a value to the specified offset
-     *
-     * @param string The offset to assign the value to
-     * @param mixed  The value to set
-     *
-     * @access public
-     * @abstracting ArrayAccess
-     */
-    public function offsetSet($offset, $value);
-    
-    /**
-     * Whether or not an offset exists
-     *
-     * @param string An offset to check for
-     * @access public
-     * @return boolean
-     * @abstracting ArrayAccess
-     */
-    public function offsetExists($offset);
-    
-    /**
-     * Unsets an offset
-     *
-     * @param string The offset to unset
-     * @access public
-     * @abstracting ArrayAccess
-     */
-    public function offsetUnset($offset);
-    
-    /**
-     * Returns the value at specified offset
-     *
-     * @param string The offset to retrieve
-     * @access public
-     * @return mixed
-     * @abstracting ArrayAccess
-     */
-    public function offsetGet($offset);
-    
     /**
      * Fetches a chunk of the objects properties table of the given size
      *
@@ -78,11 +38,6 @@ interface ThreadedInterface extends \Countable, \ArrayAccess
      * @return array An array of items from the objects member table
      */
     public function chunk($size);
-
-    /**
-     * {@inheritdoc}
-     */
-    public function count();
 
     /**
      * Retrieves terminal error information from the referenced object
@@ -134,12 +89,6 @@ interface ThreadedInterface extends \Countable, \ArrayAccess
      * @return bool A boolean indication of success
      */
     public function merge($from, $overwrite = true);
-    
-    public function next();
-    public function current();
-    public function key();
-    public function valid();
-    public function rewind();
 
     /**
      * Send notification to the referenced object
